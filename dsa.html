@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <title>Data Structure and Algorithms</title>
+    </head>
+
+    <body>
+        <section class="main-section-lab">
+            <nav class="main-nav">
+              <ul class="main-nav-container">
+                  <li><a href=".">CoderCat</a></li>
+                  <li><a href="Labs.html">Labs</a></li>
+                  <li><a href="achievements.html">Achievements</a></li>
+                  <li><a href="project.html">Projects</a></li>
+              </ul>
+            </nav>
+        </section>
+
+        <section class="dsaQues">
+            <div class="dsaQues1">
+                <h1>Hash Tables</h1>
+                <h2>Hash table Using Array</h2>
+                <p>
+                    **<strong>Load Factor</strong>**<br>
+                    -describe how full a hash table is<br>
+                    -number of items / capacity = size / capacity<br>
+                    -used to decide when to resize array backing the hash tables<br>
+                    -too low = lots of empty space<br>
+                    -too high = increase likelihood of collisions<br><br>
+
+                    Hash table can be implemented using Array. To do so, we have to create an array first.<br><br>
+
+                    We then have to define how should the elements to be inserted into the array be hashed
+
+                    using the <strong>hashKey()</strong> method. <br><br>
+
+                    **But this will cause a problem!** <br>
+
+                    For example, when the hash key is defined based on the length of String,
+                    two String with same length() will be occupying the same index of the array and this 
+                    will cause a collision.
+                </p>
+
+                <img src="Images/hashtable1.jpg">
+                <img src="Images/hashtable2.jpg">
+                <img src="Images/hashtable3.jpg">
+                <img src="Images/hashtable4.jpg">
+
+
+                <p>
+                    **To solve this problem!**<br>
+
+                    Implement  <strong>Linear Probing</strong>, it simply means increasing the hash key in linear order 
+                    until it reaches a suitable index to be inserted. 1 probe means increase the hash key by 1.<br><br>
+
+                    Code above solved the collision issue.  When both a collision happened and the hash
+                     key is equals to the length of the array, there is no more space to insert the new
+                      item so we will start at the front of the array to find a suitable position to store 
+                      the new item.<br><br>
+
+                    **Worst case:  O(n) time complexity**<br>
+
+                    In the worst case scenario we have to traverse the array to find a suitable index to 
+                    insert the item.<br><br>
+
+                    **Better way?**<br>
+
+                    Decrease the probes used by implementing a better hashing method.<br><br>
+
+                    Other strategy to deal with collision?<br>
+
+                    **Chaining!**
+
+
+                </p>
+            </div>
+
+
+
+        </section>
+
+    </body>
+</html>

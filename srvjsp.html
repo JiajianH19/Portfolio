@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <title>Servlet and Jsp</title>
+    </head>
+
+    <body>
+
+        <section class="main-section-lab">
+            <nav class="main-nav">
+              <ul class="main-nav-container">
+                  <li><a href=".">CoderCat</a></li>
+                  <li><a href="Labs.html">Labs</a></li>
+                  <li><a href="achievements.html">Achievements</a></li>
+                  <li><a href="project.html">Projects</a></li>
+              </ul>
+            </nav>
+        </section>
+
+        <section class="srvJsp">
+            <h1>Servlet and JSP</h1>
+            <p>Jakarta Server Pages (JSP) is a collection of technologies that helps 
+                software developers create dynamically generated web pages based on HTML,
+                XML, SOAP, or other document types.<br><br>
+
+                **Servlets** are the Java programs that runs on the Java-enabled web 
+                server or application server. They are used to handle the request obtained
+                from the web server, process the request, produce the response, then send 
+                response back to the web server. <br><br>
+                
+                To better understand servlet, we need to know what is HTTP. <br><br>
+                
+                **HyperText Transfer Protocol (HTTP)**<br>
+                
+                is a communication between the client and the server.<br><br>
+                
+                An example would be, when we click on a link, the browser will send a request 
+                to the server and the server will responds with a corresponding request.<br>
+                
+                When Tomcat server received a http request  from client, it will create a request
+                object and response object.</p>
+
+                <h3>What is in the request you might ask!</h3>
+                <p>
+                    A HTTP request consists of<br>
+                    <ul>
+                        <li>Request line</li>
+                        <li>Headers</li>
+                        <li>Empty line</li>
+                        <li>Message-body (optional)</li>
+                    </ul>
+                </p>
+
+                <h3>Request line</h3>
+                <p>Request-Line = Method  Request-URI  HTTP-Version </p>
+
+                <h3>HTTP Request Method</h3>
+                <p>In the request, A HTTP Request Method must be specified.<br>
+
+                    There are several request methods such as HEAD, OPTIONS, 
+                    DELETE, TRACE, PUT and the most common GET/ POST.</p>
+
+                <h3>GET/ POST</h3>
+                <p>For easier understanding, just think of GET and POST as a process of getting 
+                    something from the server and sending somthing to the server.</p>
+
+                <h3>Headers</h3>
+                <p>The request-header fields allow the client to pass additional information about the request,
+                     and about the client itself, to the server.</p>
+
+                <h2>Servlet Life Cycle</h2>
+                <img src="Images/servletlogic.png" alt="how servlet works" style="width: 100vh; height: 50vh;">
+                <ol>
+                    <li>Servlet is first initialized by calling the init() method.</li>
+                    <li>After being initlialized, all the client's request will all be handled by calling the service() method.</li>
+                    <li>Servlet is terminated by calling the destroy() method. An example of this will be terminating the Tomcat server or terminating any unused servlet.</li>
+                    <li>init() method will be called to initialize a terminated servlet.</li>
+                </ol>
+                <p>In this article, instead of implementing Servlet and use the 3 methods mentioned, we will just extends the class of HttpServlet which will come with 2 methods, doGet() and doPost();</p>
+ 
+                <p>Now, let's say we have a servlet called MyServlet and a html page called index.html</p>
+                <img src="Images/srv1.jpg" style="width: 100vh; height: 50vh;"><br>
+                <img src="Images/jsp1.jpg" style="width: 70vh; height: 30vh;">
+                <p>What we are trying to do here is call MyServlet when the submit button is pressed.
+                    <br>
+                    <h3>But, how does it knows which servlet to call?</h3><br>
+                    The answer lies in the web.xml file. ;) <br>
+
+                    The web.xml file can be found under the WEB-INF folder and inside the xml file, 
+                    we can decide which servlet to call when certain action happened.<br>
+
+                    <img src="Images/srvmap1.jpg" style="width: 70vh; height: 30vh;">
+
+                    The above code simple links the url-pattern of printHi to the servlet MyServlet.<br><br>
+                    So the orders go like this:<br>
+                    User clicks on the submit button → certain action will be performed based on the url set → this url will
+                    be used to check in the xml file if there is any linked servlet → If there is a linked
+                    servlet, the servlet will be called.
+
+                    <h3>Can the servlets store value?🤨</h3>
+                    Yes it can, with the help of **ServletConfig** and **ServletContext.**<br>
+                    Starting to feel dizzy?🥴<br>
+                    No worries, let's explore.<br>
+
+                    <h2>ServletConfig</h2>
+                    We can store some parameter inside the xml file. <br>
+                    Wait what? Why do we have to do so?<br>
+                    Let's imagine we have a servlet inside the xml file.   <br><br>
+                    <img src="Images/srvconfig1.jpg" style="width: 70vh; height: 20vh;"><br>
+                    Woule it be nice if we can store some values in it and just retrieve it to be used in our servlet?<br>
+                    By doing so, we can modify the values directly in this xml file 😉.
+                    <img src="Images/srvconfig2.jpg" style="width: 70vh; height: 30vh;"><br>
+                    Now this servlet will store the my name inside the xml file and can be used anywhere in the servlet.<br><br>
+                    To use it in servlet, simple type
+                    <img src="Images/srvconfig3.jpg" style="width: 70vh; height: 10vh;"><br>
+                    This will store the ServletConfig as an object and the name will be stored inside the value variable.
+                </p>
+
+        
+        
+        </section>
+    </body>
+</html>

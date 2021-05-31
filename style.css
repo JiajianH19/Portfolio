@@ -1,0 +1,822 @@
+html{
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth; 
+}
+
+body{
+    margin:0;
+    
+}
+
+.main-section{
+    background-image: url(Images/codingBackground.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*-----------------Navigation bar---------------*/
+
+.main-nav-container{
+    display:flex;
+    justify-content: center;
+    margin:0;
+    list-style:none;
+    font-size: 1.2em;
+    height: 10%;
+    /* width:80%; */
+}
+
+.main-nav-container > li{
+    padding: 20px;
+    border-bottom: 2px solid white;
+}
+
+li > a{
+    font-size: 1.5em;
+}
+
+li > a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .main-nav-container{
+        font-size: 0.4em;
+        
+    }
+
+    .main-container > .logo{
+        height: 10vh;
+        width: 10vh;
+    }
+
+    
+    .programBtn > button{
+        width: auto;
+    }
+
+    
+
+}
+
+.main-nav-container > li:hover{
+    background-image: linear-gradient(#817984,#a99fa2,#b8adad);
+    opacity: 0.8;
+}
+
+
+/* ----------End of Navigation bar----- */
+/*index.html*/
+
+/*-----------------Title---------------*/
+
+.title{
+    
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+
+.main-container{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+
+.main-container > .logo{
+    background-image: url(Images/cat_logo.png);
+    height: 260px;
+    width: 260px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    opacity: 0.9;
+    margin-top: 2vh;
+}
+
+.main-container > .main-title{
+    font-size: 2.5em;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+.hidden {
+    opacity:0;
+  }
+
+.console-container {
+   
+    font-family:Khula;
+    font-size:3em;
+    text-align:center;
+    height:100px;
+    width:600px;
+    display:block;
+    position:relative;
+    color:white;
+    top:30px;
+    bottom:0;
+    padding-left:30px;
+    right:0;
+    margin:30px auto;
+  }
+
+.console-underscore {
+     display:inline-block;
+    position:relative;
+    top:-0.14em;
+    left:10px;
+  }
+
+
+/*-----------------End of title---------------*/
+
+/*-----------------Introduction---------------*/
+.self-introduction-section{
+    background-color: white;
+    font-family: 'Lora', serif;
+    
+    
+}
+
+/*-----------------End of Introduction---------------*/
+
+/* Skills */
+.skills-container{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    
+    /* position: relative; */
+    text-align: center;
+} 
+
+/* .skills-background{
+    background-image: url(codingBackground.jpeg);
+    width: 100%;
+    height: 100%;            
+    position: absolute;
+    opacity: 0.2;
+    background-repeat: no-repeat;
+    background-size: 100%;
+} */
+
+.skillsElement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    margin: 40px;
+    border-radius: 12px;
+    
+    background-color:white;
+    background-image: linear-gradient(#d7e1ec,#ffffff);
+    border-bottom: 3px solid grey; 
+    
+}
+
+.skillsElement:hover{
+    background-image: linear-gradient(#f5f7fa,#b8c6db);
+}
+
+.java-logo{
+    height: 70px;
+    width: 70px;
+    background: url(Images/java.svg);
+    background-repeat: no-repeat;
+}
+
+.webdev-logo{
+    height: 70px;
+    width: 70px;
+    background: url(Images/webdev.svg);
+    background-repeat: no-repeat;
+}
+
+.db-logo{
+    height: 70px;
+    width: 70px;
+    background: url(Images/mysql.svg);
+    background-repeat: no-repeat;
+}
+
+.javaWeb-logo{
+    height: 70px;
+    width: 70px;
+    background: url(Images/javaweb.svg);
+    background-repeat: no-repeat;
+}
+
+.etc-logo{
+    height: 70px;
+    width: 70px;
+    background: url(Images/etc.svg);
+    background-repeat: no-repeat;
+}
+
+.email-container{
+    flex-direction: row;
+    display: flex;
+}
+
+.emaillogo>img{
+    width:80px;
+    height:80px;
+}
+
+.email{
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    margin-left: 15px;
+    font-size: 1.2em;
+}
+
+
+.phoneNum-container{
+    margin-top: 20px;
+    flex-direction: row;
+    display: flex;
+    margin-left: -80px;
+}
+
+.phonelogo>img{
+    width:70px;
+    height:70px;
+}
+
+.phonenumber{
+    display:flex;
+    justify-items: center;
+    align-items:center;
+    margin-left: 15px;
+    font-size: 1.2em;
+
+}
+
+/*-----------------End of skills---------------*/
+
+
+/* Footer */
+footer{
+    text-align: center;
+}
+
+/*-----------------End of index.html---------------*/
+
+/*-----------------labs.html---------------*/
+.main-section-lab{
+    height: 100px;
+    background-image: url(Images/macbook.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.labsContainer{
+    font-size: 3em;
+    font-family: 'Lora', serif;
+}
+
+.programmingQuesContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    
+}
+
+.programImage{
+    background-image: url(Images/laptop_plant.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    
+    width: 50vw;
+    height: 30vh;
+    flex:1;
+}
+
+.programInner{
+    flex:1;
+    display: flex;
+    background-color:#F2F2F2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.programInner > .programDescription{
+    padding-left: 50px;
+}
+
+.programBtn{
+    margin-top:4vh;
+    
+}
+
+.programBtn > button{
+    
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid #555;
+    
+}
+
+.programBtn > button:hover{
+    background-color:ghostwhite;
+}
+
+.DSAContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    
+}
+
+.DSAImage{
+    background-image: url(Images/calculation.jpg);
+    background-repeat: no-repeat;
+    background-position:bottom;
+    background-size: cover;
+
+    width: 50vw;
+    height: 30vh;
+    flex:1;
+}
+
+.DSAInner{
+    flex:1;
+    display: flex;
+    background-color:#F2F2F2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.DSAInner > .DSADescription{
+    padding-left: 50px;
+}
+
+.DSABtn{
+    margin-top:4vh;
+    
+}
+
+.DSABtn > button{
+    border: 1px solid #555;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border-radius: 25px;
+}   
+
+.DSABtn > button:hover{
+    background-color:ghostwhite;
+}
+
+
+.SrvJSPContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    
+}
+
+.SrvJSPImage{
+    background-image: url(Images/web.jpg);
+    background-repeat: no-repeat;
+    background-position:bottom;
+    background-size: cover;
+
+    width: 50vw;
+    height: 30vh;
+    
+    flex:1;
+}
+
+.SrvJSPInner{
+    flex:1;
+    display: flex;
+    background-color:#F2F2F2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.SrvJSPInner > .SrvJSPDescription{
+    padding-left: 50px;
+}
+
+.SrvJSPBtn{
+    margin-top:4vh;
+    
+}
+
+.SrvJSPBtn > button{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid #555;
+}    
+
+.SrvJSPBtn > button:hover{
+    background-color:ghostwhite;
+}
+
+
+/*-----------------End of labs.html---------------*/
+
+/*-----------------programming.html---------------*/
+/* Popup container - can be anything you want */
+/* Programming button popup */
+.programbtn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .programbtn .prgmbtnOverText {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .programbtn .prgmbtnOverText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .programbtn .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
+  .programbtn .hide {
+    visibility:hidden;
+    
+  }
+/* End of Programming button popup */
+
+/* DSA button popup */
+  .dsabtn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .dsabtn .dsabtnOverText {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .dsabtn .dsabtnOverText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .dsabtn .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    
+  }
+
+  .dsabtn .hide {
+    visibility:hidden;
+    -webkit-animation: fadeOut 1s;
+    animation: fadeOut 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+/* End of DSA button popup */
+
+/* ServletJsp button popup */
+.SrvJSPbtn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .SrvJSPbtn .SrvJSPbtnOverText {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .SrvJSPbtn .SrvJSPbtnOverText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .SrvJSPbtn .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    
+  }
+
+  .SrvJSPbtn .hide {
+    visibility:hidden;
+    -webkit-animation: fadeOut 1s;
+    animation: fadeOut 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+ /* End of ServletJsp button popup */
+  /* End of labs.html */
+
+
+/* programming, dsa and servletjsp .html */
+.programQues{
+      background-color: #555;
+      display: flex;
+      color: white;
+      
+      /* border: 1px solid red; */
+}
+
+.programQues1-container{
+    border-bottom: 1px solid white;
+}
+
+
+.dsaQues{
+    background-color: #555;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.dsaQues1{
+    border-bottom: 1px solid white;
+}
+
+.dsaQues1 > img{
+    height: 60vh;
+    width: 60vh;
+}
+
+.srvJsp{
+    background-color: #555;
+    display:flex;
+    flex-direction: column;
+    color: white;
+}
+/* End of  programming, dsa and servletjsp .html */
+
+
+
+/*project.html*/
+.project{
+    background-color: #555;
+    color:white;
+}
+
+.project h1{
+    margin-top: 0;
+    padding-top:30px;
+    text-align: center;
+    font-size: 3em;
+    
+}
+
+.use-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    font-size: 1.3em;
+    
+}
+
+.tech-container{
+    margin:auto;
+}
+
+
+.project-intro{
+    margin-top: 10vh;
+    font-size: 1.2em;
+}
+
+.bugtrackingresult{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bugtrackingresult > img{
+    height:80vh;
+    width:80vw;
+}
+
+
+
+/*achievments.html*/
+* {box-sizing:border-box}
+
+
+.achivementsbg{
+    background-color: #555;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides > img{
+    height:780px;
+    
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: black;
+  background-color: #F2F2F2;
+  font-weight: 800;
+  font-size: 20px;
+  padding: 1px 12px;
+  position: relative;
+  bottom: 90px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+/* .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+} */
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

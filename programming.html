@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <title>Programmig Question</title>
+    </head>
+
+    <body>
+        <section class="main-section-lab">
+            <nav class="main-nav">
+              <ul class="main-nav-container">
+                  <li><a href=".">CoderCat</a></li>
+                  <li><a href="Labs.html">Labs</a></li>
+                  <li><a href="achievements.html">Achievements</a></li>
+                  <li><a href="project.html">Projects</a></li>
+              </ul>
+            </nav>
+        </section>
+
+        <section class="programQues">
+            <div class="programQues1-container">
+                <h1>Word Search</h1>
+                <p>Given an m x n grid of characters board and a string word, return true if word exists in the grid.</p>
+                <p>The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.</p>
+                <img src="Images/wordsearch.jpg">
+                <img src="Images/wordSearchBoard.png">
+                <p>
+                    **Let's use the test case above.**<br>
+
+                    First, we store break the String into characters and store it in an array of characters and we will get:<br><br>
+                    
+                    **[A,B,C,C,E,D]**<br><br>
+                    
+                    The two for loops will be representing rows and columns. The loop will start at first row, from first item to last item and proceeds to second row items. <br><br>
+                    
+                    For each of the iteration, a Depth-first-search (DFS) will be performed. <br>
+                    
+                    **Depth-first-search (DFS)**
+                    
+                    The dfs() method will accept 5 parameters:
+
+                    <ul>
+                        <li>a board with different characters</li>
+                        <li>an array of characters</li>
+                        <li>integer row number(i)</li>
+                        <li>integer column number(j)</li>
+                        <li>integer k, which is used to access the items in character array.</li>
+                    </ul>
+
+                    The if statement will check if the row and column exceeds the board. It will then check if the character array does contain the character at current position of board[i][j], 
+                     false value will be returned if either one of these statements is true.<br><br>
+
+                    Return true if the k value is equals to the length of character array. This means the loop has found all the character specified.<br><br>
+
+                    Mark the current position so it cannot be revisited by setting board[i][j] = '\0' .<br><br>
+
+                    Check the four sides of the current position and return true is either one of the conditions is met.<br><br>
+
+                    Check the four sides of the current position and return true is either one of the conditions is met.<br><br>
+                </p>
+            
+            </div>
+
+        </section>
+       
+
+
+        
+
+
+
+    </body>
+</html>
